@@ -18,9 +18,11 @@ Route::get('/', [ClientController::class, 'home']);
 Route::get('/shop', [ClientController::class, 'shop']);
 Route::get('/cart', [ClientController::class, 'cart']);
 Route::get('/checkout', [ClientController::class, 'checkout']);
+Route::get('/login', [ClientController::class, 'login']);
+Route::get('/signup', [ClientController::class, 'signup']);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+// require __DIR__.'/auth.php';
